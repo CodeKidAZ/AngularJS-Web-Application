@@ -1,0 +1,21 @@
+caption{
+    margin-bottom: 15px;
+}
+
+
+table {
+    border-collapse: collapse;
+
+}
+thead {
+    background: #395870;
+    color: #fff;
+}
+tbody tr:nth-child(even) {
+    background: #c7c7ce;
+}
+th, td {
+    border: 1px solid #cecfd5;
+    padding: 10px 15px;
+    text-align: center;
+}

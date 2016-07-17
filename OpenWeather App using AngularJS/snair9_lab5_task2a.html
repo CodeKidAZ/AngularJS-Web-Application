@@ -1,0 +1,109 @@
+<div class="container">
+    <table>
+        <caption>WEATHER APP</caption>
+        <thead>
+        <tr>
+            <th scope="col">City </th>
+            <th scope="col">Country Code</th>
+            <th scope="col">Timestamp</th>
+            <th scope="col">Temperature(C)</th>
+            <th scope="col">Humidity(%)</th>
+            <th scope="col">WindSpeed(mi/hr)</th>
+            <th scope="col">Cloudiness(%)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="row1">
+            <td> <a href="#/PhoenixForecast">{{cities.phoenix.name}}</a></td>
+            <td> {{cities.phoenix.countrycode}} </td>
+            <td> {{cities.phoenix.timestampCurrent}} </td>
+            <td> {{cities.phoenix.temperature}} C </td>
+            <td> {{cities.phoenix.humidity}} % </td>
+            <td> {{cities.phoenix.windspeed}} mi/hr </td>
+            <td> {{cities.phoenix.cloudiness}} % </td>
+        </tr>
+        <tr id="row2">
+            <td> {{cities.phoenixDiff.name}} </td>
+            <td> {{cities.phoenixDiff.countrycode}} </td>
+            <td> {{cities.phoenixDiff.timestampCurrent}} </td>
+            <td> {{cities.phoenixDiff.temperature}} C </td>
+            <td> {{cities.phoenixDiff.humidity}} % </td>
+            <td> {{cities.phoenixDiff.windspeed}} mi/hr </td>
+            <td> {{cities.phoenixDiff.cloudiness}} % </td>
+        </tr>
+
+        <tr id="row3">
+            <td> <a href="#/LondonForecast">{{cities.london.name}}</a> </td>
+            <td> {{cities.london.countrycode}} </td>
+            <td> {{cities.london.timestampCurrent}} </td>
+            <td> {{cities.london.temperature}} C </td>
+            <td> {{cities.london.humidity}} % </td>
+            <td> {{cities.london.windspeed}} mi/hr </td>
+            <td> {{cities.london.cloudiness}} %</td>
+        </tr>
+
+        <tr id="row4">
+            <td> {{cities.londonDiff.name}} </td>
+            <td> {{cities.londonDiff.countrycode}} </td>
+            <td> {{cities.londonDiff.timestampCurrent}} </td>
+            <td> {{cities.londonDiff.temperature}} C </td>
+            <td> {{cities.londonDiff.humidity}} % </td>
+            <td> {{cities.londonDiff.windspeed}} mi/hr </td>
+            <td> {{cities.londonDiff.cloudiness}} % </td>
+        </tr>
+
+        <tr id="row5">
+            <td> <a href="#/TokyoForecast">{{cities.tokyo.name}}</a> </td>
+            <td> {{cities.tokyo.countrycode}} </td>
+            <td> {{cities.tokyo.timestampCurrent}} </td>
+            <td> {{cities.tokyo.temperature}} C</td>
+            <td> {{cities.tokyo.humidity}} %</td>
+            <td> {{cities.tokyo.windspeed}} mi/hr</td>
+            <td> {{cities.tokyo.cloudiness}} %</td>
+        </tr>
+        <tr id="row6">
+            <td> {{cities.tokyoDiff.name}}  </td>
+            <td> {{cities.tokyoDiff.countrycode}} </td>
+            <td> {{cities.tokyoDiff.timestampCurrent}} </td>
+            <td> {{cities.tokyoDiff.temperature}} C</td>
+            <td> {{cities.tokyoDiff.humidity}} %</td>
+            <td> {{cities.tokyoDiff.windspeed}} mi/hr</td>
+            <td> {{cities.tokyoDiff.cloudiness}} %</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <<td colspan="7" >
+            <select id="dropDownList">
+                <option value="empty" selected></option>
+                <option value="Tokyo"      onclick="userSelection(event)" >Tokyo</option>
+                <option value="Frankston"  onclick="userSelection(event)" >Frankston</option>
+                <option value="Quintana"   onclick="userSelection(event)" >Quintana</option>
+                <option value="Denice"     onclick="userSelection(event)" >Denice</option>
+                <option value="Kathmandu"  onclick="userSelection(event)" >Kathmandu</option>
+            </select>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="7">
+                <input type="button" id="refresh" ng-click=cities.refreshWithRandomData(event) value="Refresh" />
+                <input type="button" id="clear" ng-click=cities.clearLocalStorage(event) value="ClearLocalStorage" />
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="7">
+                <p>Positive Number = UP</p>
+                <p>Negative Number = DOWN</p>
+            </td>
+        <tr>
+            <td colspan="3">
+                <p id="temperature"></p>
+                <p id="humidity"></p>
+                <p id="niceweather"></p>
+                <p id="worstweather"></p>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
